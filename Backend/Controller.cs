@@ -20,8 +20,9 @@ namespace HelloWorld
 
             //Tip tester3 = new Tip();
             //tester3.Run();
-
-            Console.WriteLine($"Output: {ConditionalDemo.isWithinRange(12, 10, 2).ToString()} Hi");
+            
+            Console.WriteLine($"Given num {ConditionalDemo.num}, target {ConditionalDemo.target}, and {ConditionalDemo.range}" +
+                $". The result is: {ConditionalDemo.IsWithinRange().ToString()}");
         }
     }
 }

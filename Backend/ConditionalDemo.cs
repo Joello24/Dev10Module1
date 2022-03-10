@@ -8,6 +8,20 @@ namespace HelloWorld.Backend
 {
     static internal class ConditionalDemo
     {
+
+        public static readonly int num, target, range;
+
+
+        static ConditionalDemo() {
+            Console.WriteLine("Enter num: ");
+            num = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter target: ");
+            target = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter range: ");
+            range = int.Parse(Console.ReadLine());
+        }
         /// <summary>
         /// /// <summary>
         /// Given a non-negative number, return true if the number is within range of a multiple of the target.
@@ -21,7 +35,19 @@ namespace HelloWorld.Backend
         /// <param name="num2"></param>
         /// <param name="range"></param>
         /// <returns></returns>
-        public static bool isWithinRange(int num, int target, int range) {
+        public static bool IsWithinRange(int num, int target, int range) {
+            if (num < 0)
+            {
+                return false;
+            }
+            else if ((num % target) <= range)
+            {
+                return true;
+            }
+            else return false;
+        }
+        public static bool IsWithinRange()
+        {
             if (num < 0)
             {
                 return false;
